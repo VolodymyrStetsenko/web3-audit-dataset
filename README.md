@@ -4,6 +4,8 @@ Reproducible local corpus builder for Web3 audit findings, security reports, and
 
 The project collects source material into durable raw storage, normalizes it into content-addressed documents, indexes it with SQLite FTS5, and exports retrieval-ready JSONL. It is designed for private security research, local RAG systems, and repeatable dataset engineering.
 
+Within [Volodymyr Stetsenko's security practice](https://volodymyrstetsenko.github.io/VolodymyrStetsenko/), this repository is research infrastructure: it supports evidence retrieval and reproducible analysis but does not replace source-level security review.
+
 > This repository contains the pipeline, schemas, tests, and operational tooling. It does not contain or distribute the generated corpus. Source licenses and provider terms remain attached to the collected material and must be reviewed before redistribution or model training.
 
 ## Capabilities
