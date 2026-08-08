@@ -1,0 +1,14 @@
+[Unit]
+Description=Update the local Web3 audit dataset
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/projects/web3-audit-dataset
+EnvironmentFile=%h/.config/web3-audit-dataset/credentials.env
+ExecStart=%h/projects/web3-audit-dataset/scripts/sync-local.sh
+UMask=0077
+Nice=10
+IOSchedulingClass=best-effort
+IOSchedulingPriority=6

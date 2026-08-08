@@ -1,0 +1,15 @@
+{
+  "name": "synthetic-public-example",
+  "description": "Synthetic records for schema and ingestion validation. No third-party corpus content is included.",
+  "license": "Apache-2.0",
+  "files": [
+    {
+      "path": "canonical-document.json",
+      "schema": "../../schemas/canonical-document.schema.json"
+    },
+    {
+      "path": "rag-chunk.json",
+      "schema": "../../schemas/rag-chunk.schema.json"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "local:ec8c6f2a43e6535a9c185ba6e54b704c85defb188bf0f0214cab6fba3f9bca66:00000",
+  "text": "## Summary\n\nA state transition makes an external call before recording completion.\n\n## Recommendation\n\nApply checks-effects-interactions and add a reentrancy guard where appropriate.",
+  "page_content": "## Summary\n\nA state transition makes an external call before recording completion.\n\n## Recommendation\n\nApply checks-effects-interactions and add a reentrancy guard where appropriate.",
+  "metadata": {
+    "source": "local-report",
+    "source_id": "synthetic/reentrancy.md",
+    "source_ids": [
+      "synthetic/reentrancy.md"
+    ],
+    "source_url": null,
+    "source_urls": [],
+    "solodit_finding_ids": [],
+    "raw_sha256": "7087c419d9cc1c72b568413e34df74c886cae93dda19dd393c8f18649c4a2e57",
+    "tags": [
+      "synthetic"
+    ],
+    "content_format": "markdown",
+    "rights": {
+      "status": "synthetic-public-example"
+    },
+    "document_id": "local:ec8c6f2a43e6535a9c185ba6e54b704c85defb188bf0f0214cab6fba3f9bca66",
+    "chunk_index": 0,
+    "content_sha256": "7087c419d9cc1c72b568413e34df74c886cae93dda19dd393c8f18649c4a2e57"
+  }
+}

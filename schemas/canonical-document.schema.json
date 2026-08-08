@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/VolodymyrStetsenko/web3-audit-dataset/schemas/canonical-document.schema.json",
+  "title": "Canonical Web3 Security Document",
+  "type": "object",
+  "required": ["id", "text", "page_content", "metadata"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "text": {
+      "type": "string"
+    },
+    "page_content": {
+      "type": "string"
+    },
+    "metadata": {
+      "$ref": "#/$defs/metadata"
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "metadata": {
+      "type": "object",
+      "required": ["source", "source_id", "rights"],
+      "properties": {
+        "source": {
+          "enum": ["solodit", "github", "local-report"]
+        },
+        "source_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_url": {
+          "type": ["string", "null"],
+          "format": "uri"
+        },
+        "tags": {
+          "type": "array",
+          "items": {"type": "string"},
+          "uniqueItems": true
+        },
+        "content_format": {
+          "type": "string"
+        },
+        "rights": {
+          "type": "object",
+          "minProperties": 1
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

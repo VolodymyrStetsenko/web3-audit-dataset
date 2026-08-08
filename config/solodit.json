@@ -1,0 +1,39 @@
+{
+  "endpoint": "https://solodit.cyfrin.io/api/v1/solodit/findings",
+  "transport": "rest",
+  "method": "POST",
+  "api_key_env": "SOLODIT_API_KEY",
+  "auth_header": "X-Cyfrin-API-Key",
+  "auth_scheme": "",
+  "page_parameter": "page",
+  "page_size_parameter": "pageSize",
+  "page_start": 1,
+  "page_size": 100,
+  "items_path": "findings",
+  "total_path": "metadata.totalResults",
+  "has_more_path": null,
+  "updated_since_parameter": null,
+  "incremental_identity_field": "id",
+  "incremental_parameters": {
+    "filters.sortDirection": "Desc"
+  },
+  "static_parameters": {
+    "filters": {
+      "impact": [
+        "HIGH",
+        "MEDIUM",
+        "LOW",
+        "GAS"
+      ],
+      "reported": {
+        "value": "alltime"
+      },
+      "sortField": "Recency",
+      "sortDirection": "Asc"
+    }
+  },
+  "static_headers": {
+    "Content-Type": "application/json"
+  },
+  "minimum_interval": 3.1
+}

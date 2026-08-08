@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/VolodymyrStetsenko/web3-audit-dataset/schemas/rag-chunk.schema.json",
+  "title": "Web3 Security RAG Chunk",
+  "type": "object",
+  "required": ["id", "text", "page_content", "metadata"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": ":[0-9]{5}$"
+    },
+    "text": {
+      "type": "string"
+    },
+    "page_content": {
+      "type": "string"
+    },
+    "metadata": {
+      "type": "object",
+      "required": [
+        "source",
+        "source_id",
+        "rights",
+        "document_id",
+        "chunk_index",
+        "content_sha256"
+      ],
+      "properties": {
+        "source": {
+          "enum": ["solodit", "github", "local-report"]
+        },
+        "source_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rights": {
+          "type": "object",
+          "minProperties": 1
+        },
+        "document_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "chunk_index": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "content_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

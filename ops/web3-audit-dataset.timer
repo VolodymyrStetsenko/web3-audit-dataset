@@ -1,0 +1,11 @@
+[Unit]
+Description=Daily Web3 audit dataset delta synchronization
+
+[Timer]
+OnCalendar=daily
+Persistent=true
+RandomizedDelaySec=30m
+Unit=web3-audit-dataset.service
+
+[Install]
+WantedBy=timers.target
